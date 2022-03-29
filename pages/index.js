@@ -1,24 +1,20 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+
+import { getAllPosts } from '../lib/posts'
+import BlogPostPreview from '../components/BlogPostPreview'
 
 export default function Home() {
+  const posts = getAllPosts()
   return (
-    <div className="">
+    <div className="home">
       <Head>
         <title>Blog Page</title>
       </Head>
       <h1>Blog Page</h1>
-      <div className="">
-        <BlogPostPreview />
+      <div className="all-posts">
+        {posts.map((p)=> <BlogPostPreview posts={p} key={posts.id}/>)}
       </div>
     </div>
   )
 }
 
-const BlogPostPreview = () => {
-  return(
-    <div className="">
-      <img src="" alt="" />
-    </div>
-  )
-}
