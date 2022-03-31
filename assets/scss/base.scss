@@ -3,7 +3,8 @@
 .home{
     .all-posts{
        display: flex;
-        flex-direction: row; 
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     
 }
