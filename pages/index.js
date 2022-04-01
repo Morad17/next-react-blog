@@ -6,7 +6,6 @@ import BlogPostPreview from '../components/BlogPostPreview'
 import { sortByDate } from '../utils'
 
 export default function Home({ posts }) {
-  // const posts = getAllPosts()
   return (
     <div className="home">
       <Head>

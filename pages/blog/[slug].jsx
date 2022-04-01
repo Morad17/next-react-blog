@@ -41,7 +41,6 @@ export async function getStaticPaths() {
     params: {slug: file.replace('.md', '')}
   }))
 
-  console.log(paths)
   return {
         paths,
         fallback: false,
